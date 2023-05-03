@@ -1,0 +1,7 @@
+import 'zone.js/dist/zone';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { RootModule } from './root/root.module';
+
+platformBrowserDynamic()
+  .bootstrapModule(RootModule)
+  .catch((e) => console.log(e));
