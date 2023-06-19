@@ -1,0 +1,44 @@
+<h1>DOM Manipulation</h1>
+
+<div class="container">
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Option</th>
+          <th>Color test</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.label }}</td>
+          <td>
+            <div class="col-md-6" [id]="'colortest' + i">
+              What is this color?
+            </div>
+          </td>
+          <td>
+            <button
+              type="button"
+              (click)="AddNow('colortest' + i)"
+              class="btn btn-primary col-md-2"
+            >
+              Add class
+            </button>
+            <button
+              type="button"
+              (click)="RemoveNow('colortest' + i)"
+              class="btn btn-warning col-md-2"
+            >
+              Remove Class
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row mt-5">></div>
+</div>
